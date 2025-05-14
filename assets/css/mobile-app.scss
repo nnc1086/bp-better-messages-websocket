@@ -1,0 +1,257 @@
+body, html{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+body.bm-mobile-device-ios{
+}
+
+* {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+}
+
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text; /* Safari */
+  -moz-user-select: text; /* Firefox */
+  -ms-user-select: text; /* IE/Edge */
+}
+
+#better-messages-mobile-app{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100000;
+  overflow: auto;
+
+  .bp-messages-wrap{
+    height: 100% !important;
+
+    .bp-messages-threads-wrapper{
+      height: 100% !important;
+    }
+  }
+
+  .bp-messages-wrap.bp-messages-mobile .chat-header .mobileClose{
+    display: none !important;
+  }
+}
+
+#bm-app-login-screen{
+    //position: fixed;
+    //overflow: auto;
+    //z-index: 100000;
+    background: #fcfcfc;
+    padding-top: var(--bm-safe-area-top);
+    padding-bottom: var(--bm-safe-area-bottom);
+    min-height: 100%;
+
+    .bm-login-logo{
+        margin: 150px auto 50px;
+        user-select: none;
+
+        img{
+          pointer-events: none;
+          user-select: none;
+          max-height: 100px;
+          display: block;
+          margin: 0 auto;
+        }
+    }
+
+    .bm-login-form{
+        width: 80%;
+        margin: 0 auto;
+
+        .bm-form-group{
+          display: block;
+          margin-bottom: 20px;
+
+          label{
+              display: block;
+              text-align: center;
+              margin-bottom: 10px;
+              font-size: 16px;
+          }
+
+          input{
+              display: block;
+              width: 100%;
+              padding: 8px;
+              height: 50px;
+              font-size: 16px;
+              text-align: center;
+              box-sizing: border-box;
+          }
+        }
+
+        .bm-login-button{
+          button{
+              display: block;
+              width: 100%;
+              height: 50px;
+              font-size: 16px;
+              text-transform: uppercase;
+          }
+        }
+
+        .bm-register-button{
+          text-align: center;
+          margin-top: 20px;
+
+          a{
+              text-decoration: none;
+              color: black;
+              opacity: 0.8;
+          }
+        }
+
+        .terms-and-conditions-container{
+          margin: 20px 0;
+          text-align: center;
+
+          input{
+            margin-right: 5px;
+          }
+
+          a{
+            color: black;
+            text-decoration: underline;
+          }
+        }
+    }
+}
+
+body.landscape, body.portrait-secondary{
+  .bp-messages-wrap.bp-messages-mobile{
+
+    .chat-header{
+      padding-left: var(--bm-safe-area-left);
+      padding-right: var(--bm-safe-area-right);
+    }
+
+    .threads-list .thread {
+      .pic {
+        padding-left: max(var(--bm-safe-area-left), 15px) !important;
+      }
+
+      .actions{
+          padding-right: max(var(--bm-safe-area-right), 15px) !important;
+      }
+    }
+
+    .chat-footer,
+    .bpbm-chat-main .bm-before-message-list > *,
+    .bm-messages-list,
+    .bpbm-user-options,
+    .bm_user_selector .bm_user_selector__menu .bm_user_selector__menu-list .bm_user_selector__option,
+    .bm_user_selector{
+          padding-left: max(var(--bm-safe-area-left), 15px);
+          padding-right: max(var(--bm-safe-area-right), 15px);
+      }
+    }
+
+    .bm-reply{
+      box-sizing: border-box !important;
+      padding-left: max(var(--bm-safe-area-left), 15px);;
+      padding-right: max(var(--bm-safe-area-right), 15px);
+    }
+
+    .chat-tabs > div{
+      &:first-child{
+        padding-left: max(var(--bm-safe-area-left), 15px);
+      }
+
+      &:last-child{
+          padding-right: max(var(--bm-safe-area-right), 15px);
+      }
+    }
+}
+
+  .bp-messages-wrap {
+    .chat-header {
+      padding-top: var(--bm-safe-area-top);
+      box-sizing: content-box !important;
+    }
+
+    .chat-tabs{
+      > div {
+        padding-bottom: var(--bm-safe-area-bottom) !important;
+        box-sizing: content-box !important;
+      }
+    }
+
+    .chat-footer {
+      padding-bottom: var(--bm-safe-area-bottom) !important;
+      box-sizing: content-box !important;
+    }
+
+    .bm-app-settings{
+      button{
+        display: block;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+}
+
+.bpbm-gifs-selector{
+  padding-bottom: var(--bm-safe-area-bottom) !important;
+  box-sizing: content-box !important;
+}
+
+.uppy-Dashboard--modal .uppy-Dashboard-inner{
+  margin-top: var(--bm-safe-area-top);
+  margin-bottom: var(--bm-safe-area-bottom);
+}
+
+.bp-messages-wrap .bm-reply{
+  padding-bottom: var(--bm-safe-area-bottom) !important;
+  box-sizing: content-box !important;
+}
+
+.Toastify__toast-container{
+  padding-top: var(--bm-safe-area-top);
+  padding-bottom: var(--bm-safe-area-bottom);
+}
+
+.bm-user-option-link{
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.fslightbox-nav{
+    top: var(--bm-safe-area-top);
+}
+
+.bp-messages-private-call.bpbm-tapped .bp-messages-call-controls.show-on-tap,
+.bp-messages-call-controls:not(.show-on-tap),
+.bp-messages-group-call-controls-v2{
+    bottom: var(--bm-safe-area-bottom) !important;
+}
+
+.bp-messages-wrap .bp-messages-call-wrap-group .bpbm-call-settings{
+  margin-bottom: var(--bm-safe-area-bottom) !important;
+}
+
+/** PeepSo **/
+.ps-vip__icon {
+  display: inline-block;
+  height: 100%;
+  min-width: 16px;
+  max-height: 16px;
+}

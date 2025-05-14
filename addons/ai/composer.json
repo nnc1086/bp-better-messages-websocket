@@ -1,0 +1,36 @@
+{
+  "require": {
+    "openai-php/client": "^v0.10.3",
+    "symfony/http-client": "^7.2.3",
+    "nyholm/psr7": "^1.8.2",
+    "guzzlehttp/guzzle": "^7.9.2",
+    "react/stream": "^1.4.0",
+    "react/http": "^1.11.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "scripts": {
+    "prefix-namespaces": [
+      "strauss"
+    ],
+    "post-install-cmd": [
+      "@prefix-namespaces"
+    ],
+    "post-update-cmd": [
+      "@prefix-namespaces"
+    ]
+  },
+  "require-dev": {
+    "brianhenryie/strauss": "*"
+  },
+  "extra": {
+    "strauss": {
+      "target_directory": "dependencies",
+      "namespace_prefix": "BetterMessages\\",
+      "delete_vendor_packages": true
+    }
+  }
+}
